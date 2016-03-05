@@ -11,7 +11,7 @@ def getMostCommonWord(articlefilesource):
     f = open(articlefilesource)
     r = re.findall(pattern,f.read())
     #只返回10个频度最高的单词
-    return Counter(r).most_common()
+    return Counter(r).most_common(10)
 
 wordtuple = getMostCommonWord(textpath)
 
